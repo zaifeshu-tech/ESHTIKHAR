@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="mBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="mCylGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ea580c" />
+      <stop offset="50%" stop-color="#f97316" />
+      <stop offset="100%" stop-color="#c2410c" />
+    </linearGradient>
+    <linearGradient id="mFlameGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#ea580c" />
+      <stop offset="50%" stop-color="#facc15" />
+      <stop offset="100%" stop-color="#ffffff" />
+    </linearGradient>
+    <filter id="mGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Full-bleed background for maskable safe zone -->
+  <rect width="512" height="512" fill="url(#mBgGrad)" />
+
+  <!-- Safe zone scaled contents (within central 80%) -->
+  <g transform="translate(64, 64) scale(0.75)">
+    <!-- Top Collar / Handle -->
+    <rect x="206" y="90" width="100" height="40" rx="12" fill="#9a3412" />
+    <rect x="226" y="100" width="60" height="20" rx="6" fill="#0f172a" />
+    
+    <!-- Valve / Brass Cap -->
+    <rect x="236" y="125" width="40" height="20" rx="4" fill="#fbbf24" />
+    <circle cx="256" cy="135" r="5" fill="#d97706" />
+
+    <!-- Cylinder Body Dome Top -->
+    <path d="M 166 185 C 166 145, 346 145, 346 185 L 346 370 C 346 410, 166 410, 166 370 Z" fill="url(#mCylGrad)" />
+
+    <!-- Cylinder Welds / Rings -->
+    <path d="M 166 220 Q 256 230 346 220" stroke="#9a3412" stroke-width="5" fill="none" />
+    <path d="M 166 340 Q 256 350 346 340" stroke="#9a3412" stroke-width="5" fill="none" />
+
+    <!-- Cylinder Foot Ring / Base -->
+    <rect x="186" y="390" width="140" height="30" rx="8" fill="#9a3412" />
+    <rect x="216" y="402" width="80" height="10" rx="4" fill="#0f172a" />
+
+    <!-- Flame Accent in center -->
+    <path d="M 256 240 C 235 270, 230 295, 240 312 C 248 325, 264 325, 272 312 C 282 295, 277 270, 256 240 Z" fill="url(#mFlameGrad)" filter="url(#mGlow)" />
+
+    <!-- Checkmark Badge in bottom right for Deduplication / Verified -->
+    <circle cx="370" cy="370" r="54" fill="#10b981" />
+    <circle cx="370" cy="370" r="48" fill="#065f46" />
+    <path d="M 350 370 L 364 384 L 392 354" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

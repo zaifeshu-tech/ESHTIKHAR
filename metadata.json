@@ -1,0 +1,8 @@
+{
+  "name": "LPG Consumer Deduplication Checklist",
+  "description": "Production-ready, mobile-first operational web application for LPG agencies to record Consumer Numbers against Delivery Men in IST and automatically detect daily, 30-day, and monthly duplicate entries.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
